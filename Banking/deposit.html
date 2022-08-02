@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit</title>
+    
+    <link rel="shortcut icon" href="/resources/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-8">
+                <h2>
+                    Deposit money into customer's account
+                </h2>
+            </div>
+            <div class="col-md-4">
+                <a href="listcustomer.html" class="btn btn-outline-light" >
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                    <span>List of customers</span>
+                </a>
+            </div>
+        </div>
+        <form action="post">
+            <fieldset class="row g-3">
+                <div class="col-md-6">
+                    <label for="customerID" class="form-label">Customer ID</label>
+                    <input type="text" class="form-control" id="customerID" name="fullName" value="">
+                </div>
+                <div class="col-md-6">
+                    <label for="fullName" class="form-label">Full Name </label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" value="">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Current balance($)</label>
+                    <input type="text" class="form-control" id="balance" name="balance" value="">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Transaction Amount($)</label>
+                    <input type="text" class="form-control" id="transactionAmount" name="transactionAmount" value="">
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" id="deposit" class="btn btn-outline-success">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Deposit
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript" src="/resources/js/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery.validate-1.19.3.min.js"></script>
+    <script type="text/javascript" src="/resources/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/resources/js/popper-v1.16.0.min.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery.number.js"></script>
+    <script type="text/javascript" src="/resources/js/custom-validation.js"></script>
+    <script type="text/javascript" src="/resources/js/app.js"></script>
+</body>
+</html>

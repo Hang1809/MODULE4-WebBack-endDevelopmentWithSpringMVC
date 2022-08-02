@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer management</title>
+
+    <link rel="shortcut icon" href="/resources/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="col-sm-5">
+                <h1>
+                    List of customers
+                </h1>
+            </div>
+            <div class="col-sm-7">
+                <a href="./createcustomer.html" class="btn btn-outline-light">
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                    <span>Add New Customer</span>
+                </a>
+                <a href="/transferInfo.html" class="btn btn-outline-light">
+                    <i class="fa fa-history" aria-hidden="true"></i>
+                    <span>Transfer Money Information</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table table-hover" id="tbCustomers">
+                <thead class="thead-green">
+                    <tr>
+
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>Email Address</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>Balance</th>
+                        <th colspan="5">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td class="text-center">Minh Bui</td>
+                        <td class="text-center">minhbui@gmail.com</td>
+                        <td class="text-center">0987654321</td>
+                        <td class="text-center">Hue</td>
+                        <td class="text-center">9000000</td>
+                        <td class="text-center">
+                            <a class="btn btn-outline-secondary" title="Edit" data-toggle="tooltip"
+                                href="/edit.html" data-bs-original-title="Edit">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a class="btn btn-outline-success" title="Deposit" data-toggle="tooltip"
+                                href="deposit.html" data-bs-original-title="Deposit">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a class="btn btn-outline-warning" title="Withdraw" data-toggle="tooltip"
+                                href="/withdraw.html" data-bs-original-title="Withdraw">
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a class="btn btn-outline-primary" title="" data-toggle="tooltip" href="/transfer.html"
+                                data-bs-original-title="Transfer">
+                                <i class="fa fa-exchange" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a class="btn btn-outline-danger" title="" data-toggle="tooltip" href="/suspended.html"
+                                data-bs-original-title="Suspended">
+                                <i class="fa fa-ban" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="/resources/js/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery.validate-1.19.3.min.js"></script>
+    <script type="text/javascript" src="/resources/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/resources/js/popper-v1.16.0.min.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery.number.js"></script>
+    <script type="text/javascript" src="/resources/js/custom-validation.js"></script>
+    <script type="text/javascript" src="/resources/js/app.js"></script>
+</body>
+
+</html>
