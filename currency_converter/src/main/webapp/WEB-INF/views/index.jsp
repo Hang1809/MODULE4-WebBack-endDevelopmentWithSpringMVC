@@ -14,7 +14,7 @@
     <label>USD: </label><br/>
     <input type="number" name="usd" placeholder="USD" value="${rUSD}"/><br/>
     <label>VND: </label><br/>
-    <input type="number" name="vnd" placeholder="VND" value="${rVND}"/><br/>
+    <input type="number" name="vnd" placeholder="VND" readonly value="${rVND}"/><br/>
     <input type="submit" id="submit" value="Converter"/>
 </form>
 </body>
