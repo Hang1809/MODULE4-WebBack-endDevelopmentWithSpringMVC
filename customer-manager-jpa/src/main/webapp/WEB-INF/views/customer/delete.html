@@ -9,9 +9,7 @@
 <div class="container">
 <h1>Delete customer</h1>
 <h2>Are you sure?</h2>
-<p>
-  <a href="/customers" class="btn btn-outline-success">Customer list</a>
-</p>
+
 <form th:action="@{/delete-customer}" th:object="${customer}" method="post">
   <input class="form-control" th:type="hidden" name="id" th:field="*{id}">
   <table class="table">
@@ -25,7 +23,12 @@
     </tr>
     <tr>
       <td></td>
-      <td><input class="btn btn-outline-danger" type="submit" value="Delete customer"></td>
+      <td>
+        <label>
+        <input class="btn btn-outline-danger" type="submit" value="Delete customer">
+          <a href="/customers" class="btn btn-outline-success">Customer list</a>
+        </label>
+      </td>
     </tr>
   </table>
 </form>

@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Create customer</title>
-  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 
 <div class="container">
+    <h1>Create customer</h1>
 
-
-    <a style="margin-top: 15px" href="/customers" class="btn btn-outline-primary">Customer list</a>
-
-<h1>Create customer</h1>
-
-<th:block th:if="${message}">
-  <p th:text="${message}"></p>
-</th:block>
-<form th:action="@{/create-customer}" th:object="${customer}" method="post">
-  <table>
-    <tr>
-      <td>First name:</td>
-      <td><input class="form-control" type="text" th:field="*{firstName}"/></td>
-    </tr>
-    <tr>
-      <td>Last name:</td>
-      <td><input class="form-control" type="text" th:field="*{lastName}"/></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><input class="btn btn-outline-success" type="submit" value="Create customer"></td>
-    </tr>
-  </table>
-</form>
+    <th:block th:if="${message}">
+        <p th:text="${message}"></p>
+    </th:block>
+    <form th:action="@{/create-customer}" th:object="${customer}" method="post">
+        <table class="table">
+            <tr>
+                <td>First name:</td>
+                <td><input class="form-control" type="text" th:field="*{firstName}"/></td>
+            </tr>
+            <tr>
+                <td>Last name:</td>
+                <td><input class="form-control" type="text" th:field="*{lastName}"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label>
+                        <input class="btn btn-outline-success" type="submit" value="Create customer">
+                        <a href="/customers" class="btn btn-outline-primary">Customer list</a>
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </form>
 </div>
 </body>
 </html>
