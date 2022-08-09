@@ -1,4 +1,4 @@
-package com.cg.service.impl;
+package com.cg.service;
 
 import com.cg.model.Customer;
 

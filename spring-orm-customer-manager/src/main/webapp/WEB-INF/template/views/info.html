@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Information</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+<form method="post" th:object="${customer}">
+    <fieldset>
+        <legend>Customer Information</legend>
+        <input type="hidden" name="id" th:value="*{id}">
+        <table class="table">
+            <tr>
+                <td>Id</td>
+                <td th:text="${customer.id}"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input class="form-control" type="text" th:field ="*{fullName}">
+                </td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>
+                    <input class="form-control" type="text" th:field="*{phone}">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input class="form-control" type="text" th:field="*{email}">
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    <input class="form-control" type="text" th:field="*{address}">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <input type="submit" class="btn btn-outline-success"  value="Update">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</div>
+<a href="/customers" class="btn btn-outline-primary">Back to list</a>.
+</body>
+</html>
