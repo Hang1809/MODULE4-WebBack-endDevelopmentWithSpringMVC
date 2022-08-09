@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/template/views/create.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/template/views" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/template/views/delete.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/template/views" />
       </map>
     </option>
   </component>

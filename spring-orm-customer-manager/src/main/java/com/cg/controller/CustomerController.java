@@ -39,6 +39,7 @@ public class CustomerController {
         return modelAndView;
     }
 
+
     @GetMapping("/create")
     public ModelAndView showCreatePage(){
         ModelAndView modelAndView = new ModelAndView();
@@ -63,5 +64,22 @@ public class CustomerController {
 
         hibernateCustomerService.save(customer);
        return "redirect:/customers";
+    }
+
+    @GetMapping("/delete/{id}")
+    public ModelAndView showDeleteForm(@PathVariable Long id){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("/delete");
+
+        Customer customer = hibernateCustomerService.findOne(id);
+        modelAndView.addObject("customer",customer);
+
+        return modelAndView;
+    }
+
+    @PostMapping("/delete/{id}")
+    public String deleteCustomer(@PathVariable Long id, @ModelAttribute Customer customer) {
+        hibernateCustomerService.delete(customer);
+        return "redirect:/customers";
     }
 }

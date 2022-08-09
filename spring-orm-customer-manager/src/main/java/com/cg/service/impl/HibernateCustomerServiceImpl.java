@@ -19,16 +19,6 @@ public class HibernateCustomerServiceImpl implements HibernateCustomerService {
     private static SessionFactory sessionFactory;
     private static EntityManager entityManager;
 
-//    static {
-//        try {
-//            SessionFactory sessionFactory = new Configuration()
-//                    .configure("hibernate.conf.xml")
-//                    .buildSessionFactory();
-//          sessionFactory.close();
-//        } catch (HibernateException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     static {
         try {
@@ -114,16 +104,37 @@ public class HibernateCustomerServiceImpl implements HibernateCustomerService {
 
     @Override
     public void delete(Long id) {
+        Customer customer = findOne(id);
+        if (customer !=null){
 
+        }
     }
+
+
 
     @Override
     public void delete(Customer customer) {
-
+            Session session = null;
+            Transaction transaction = null;
+            try {
+                session = sessionFactory.openSession();
+                transaction = session.beginTransaction();
+                session.delete(customer);
+                transaction.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+                if (transaction != null) {
+                    transaction.rollback();
+                }
+            } finally {
+                if (session != null) {
+                    session.close();
+                }
+            }
     }
 
     @Override
-    public void delete(List<Customer> customers) {
+    public void delete(List<Customer>customers) {
 
     }
 
